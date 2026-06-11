@@ -1,0 +1,35 @@
+# 项目元信息与状态机（唯一事实来源）
+title: ""            # 书名
+slug: ""             # 工作区目录名
+genre: ""            # 题材（如：东方玄幻/都市异能/星际科幻）
+tags: []             # 卖点标签（如：[升级流, 团宠, 反套路]）
+language: zh-CN
+style: ""            # 风格基调（如：热血爽文/轻松日常/暗黑权谋）
+length_tier: ""      # 短篇/中篇/长篇/超长篇
+total_chapters: 0
+words_per_chapter: 3000
+batch_size: 5
+art_enabled: true    # 是否产出美术物料
+art_mode: final      # final=全文定稿后统一出图 / incremental=每批增量
+
+stage: init          # init/planning/architecture/lore/drafting/editing/art/acceptance/delivered
+
+progress:
+  current_batch: 0
+  batches:
+    # - id: 1
+    #   chapters: [1, 5]        # 起止章号
+    #   status: pending         # pending/drafting/editing/reported/approved
+    #   reported_at: ""
+
+decisions: []
+  # - date: 2026-01-01
+  #   by: user
+  #   summary: "反派动机改为复仇，架构师已更新 synopsis 第3节"
+  #   affected: [02-architecture/synopsis.md]
+
+issues: []
+  # - date: 2026-01-01
+  #   from: editor
+  #   summary: "第12章主角剑名与道具卡不符"
+  #   status: open              # open/resolved
