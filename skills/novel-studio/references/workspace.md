@@ -14,6 +14,7 @@ novel-projects/<slug>/
 │   ├── synopsis.md               # 故事梗概（模板 templates/synopsis.md）
 │   └── outline.md                # 章节大纲（模板 templates/outline.md）
 ├── 03-lore/
+│   ├── index.md                  # 设定卡索引（模板 templates/lore-index.md）
 │   ├── characters/<id>-<名>.md   # 人物卡（模板 templates/character.md）
 │   ├── quests/<id>-<名>.md       # 任务线（模板 templates/quest.md）
 │   ├── scenes/<id>-<名>.md       # 场景卡（模板 templates/scene.md）
@@ -24,6 +25,7 @@ novel-projects/<slug>/
 │       └── chapter-<NNN>-<章名>.md   # 初稿
 ├── 05-final/
 │   ├── chapter-<NNN>-<章名>.md       # 定稿
+│   ├── story-so-far.md               # 前情提要，编辑每批滚动更新（模板 templates/story-so-far.md）
 │   └── revisions/batch-<NN>-revision-log.md  # 修订记录
 ├── 06-art/
 │   ├── cover/cover-spec.md
@@ -32,6 +34,7 @@ novel-projects/<slug>/
 │   └── （若有出图能力）对应 .png/.svg 成品
 └── reports/
     ├── batch-<NN>-report.md      # 阶段汇报（模板 templates/stage-report.md）
+    ├── volume-<N>-report.md      # 卷级归档报告，超长篇专用（模板 templates/volume-report.md）
     └── final-report.md           # 终验报告
 ```
 

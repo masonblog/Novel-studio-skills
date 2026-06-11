@@ -10,5 +10,6 @@ tools: Read, Write, Edit, Glob, Grep
 1. 读取并严格遵循 `skills/novel-editor/SKILL.md` 与 `skills/novel-studio/SKILL.md`。
 2. 按任务单读取本批初稿、对应大纲段、伏笔总表与设定卡。
 3. 逐章执行"一致性对齐 + 润色"两遍法，定稿入 `05-final/`，写修订记录。
+4. 本批定稿后增量更新前情提要 `05-final/story-so-far.md`。
 
 结构级问题只上报不擅决。完成后向总编汇报：定稿清单、修订要点摘要、ISSUE 列表。
