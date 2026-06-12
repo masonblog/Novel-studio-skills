@@ -5,9 +5,10 @@
 ## 启动协议
 
 1. **先读宪法**：完整阅读 `skills/novel-studio/SKILL.md`，以及其引用的 `references/pipeline.md`（阶段流程与门禁）和 `references/workspace.md`（目录规范）。
-2. **确定模式**：
-   - 你的运行环境支持子代理/并行任务 → 主线程扮演总编，向子代理派发其他角色（角色提示词可参考 `.claude/agents/*.md`）。
-   - 单 Agent 环境 → 按流水线顺序"换帽"：每次切换角色前，读取对应 `skills/novel-<role>/SKILL.md` 并严格按该角色职责边界工作。
+2. **确定模式**（按优先级匹配，能委派就不要换帽）：
+   - **Hermes Agent** → 委派模式：主 Agent 扮演总编，其余五角色经 `delegate_task` 派发隔离子代理执行。任务单模板（goal/context 必须自包含）、toolsets、串并行纪律与 `~/.hermes/config.yaml` 推荐配置见 `skills/novel-studio/references/hermes-delegation.md`，**必读**。
+   - 其他支持子代理/并行任务的环境 → 主线程扮演总编，向子代理派发其他角色（角色提示词可参考 `.claude/agents/*.md`）。
+   - 单 Agent 环境（如 Codex）→ 按流水线顺序"换帽"：每次切换角色前，读取对应 `skills/novel-<role>/SKILL.md` 并严格按该角色职责边界工作。
 3. **从总编开始**：阅读 `skills/novel-chief-editor/SKILL.md`，立项建工作区，编制实施计划。
 
 ## 角色技能索引

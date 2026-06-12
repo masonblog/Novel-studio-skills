@@ -1,5 +1,13 @@
 # Novel Studio Skills
 
+![Agent Skills](https://img.shields.io/badge/Agent%20Skills-SKILL.md-8A2BE2)
+![Claude Code](https://img.shields.io/badge/Claude%20Code-subagents-D97757?logo=claude&logoColor=white)
+![Hermes Agent](https://img.shields.io/badge/Hermes%20Agent-delegate%20mode-2EA44F)
+![Codex](https://img.shields.io/badge/Codex-role%20swapping-412991?logo=openai&logoColor=white)
+![Multi-Agent](https://img.shields.io/badge/workflow-multi--agent-1F6FEB)
+![Language](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-%E7%BD%91%E6%96%87%E5%88%9B%E4%BD%9C-E34F26)
+![License: MIT](https://img.shields.io/badge/license-MIT-yellow)
+
 面向 **Claude Code、Codex、Hermes Agent** 等 AI Agent 工具的多 Agent 协作网络小说创作工作流技能集。
 
 用户只需提供一个大致的梗概创意，六个角色 Agent 即可各司其职，完成从立项、世界观、大纲、设定、正文到封面插画的全流程批量创作。长篇小说**强制分批实施**，总编分段向用户汇报成果，避免单次执行过于冗长。
@@ -43,7 +51,11 @@
 
 主线程将以总编身份立项，并通过子代理派发各角色任务。
 
-### Codex / Hermes 等单 Agent 工具
+### Hermes Agent（委派模式）
+
+Hermes 支持 `delegate_task` 子代理委派。让 Agent 先阅读 `AGENTS.md`，它将以总编身份运行主对话，把架构师/设定师/写手/编辑/设计师任务委派给隔离子代理执行（任务单模板与配置建议见 [`hermes-delegation.md`](skills/novel-studio/references/hermes-delegation.md)）。建议在 `~/.hermes/config.yaml` 将 `delegation.max_iterations` 调高到 100 以容纳单批 5 章的写作量。
+
+### Codex 等单 Agent 工具
 
 在会话中让 Agent 先阅读 `AGENTS.md` 与 `skills/novel-studio/SKILL.md`，随后按流水线顺序"换帽"扮演各角色（换帽前读取对应角色 SKILL.md）。产物、目录与质量门禁与多代理模式完全一致。
 
