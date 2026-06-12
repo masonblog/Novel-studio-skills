@@ -1,4 +1,4 @@
-# Novel Studio Skills|多Agent小说创作技能集
+# Novel Studio Skills | 多Agent小说创作技能集
 
 ![Agent Skills](https://img.shields.io/badge/Agent%20Skills-SKILL.md-8A2BE2)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-subagents-D97757?logo=claude&logoColor=white)
