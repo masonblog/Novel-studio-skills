@@ -23,8 +23,9 @@ description: 多 Agent 协作网络小说创作工作流总控。当用户提供
 
 ## 多 Agent 执行模式
 
-- **支持子代理的工具（如 Claude Code）**：主线程扮演总编，通过子代理（见 `.claude/agents/`）派发架构师、设定师、写手、编辑、设计师任务。同批内写手与编辑串行；插画与正文可并行。
-- **单 Agent 工具（Codex、Hermes 等）**：同一 Agent 按流水线顺序"换帽"扮演各角色。换帽时必须先读取对应角色技能的 SKILL.md，并严格以该角色的职责边界工作，不得跨角色越权（如写手不得擅改设定）。
+- **Claude Code**：主线程扮演总编，通过子代理（见 `.claude/agents/`）派发架构师、设定师、写手、编辑、设计师任务。同批内写手与编辑串行；插画与正文可并行。
+- **Hermes Agent**：主 Agent 扮演总编，其余角色经 `delegate_task` 以隔离子代理委派执行。任务单模板、toolsets 限定、串并行纪律与推荐配置见 [references/hermes-delegation.md](references/hermes-delegation.md)。
+- **其他单 Agent 工具（Codex 等无子代理能力的环境）**：同一 Agent 按流水线顺序"换帽"扮演各角色。换帽时必须先读取对应角色技能的 SKILL.md，并严格以该角色的职责边界工作，不得跨角色越权（如写手不得擅改设定）。
 
 无论哪种模式，**角色之间只通过工作区文件交接**，不依赖对话上下文传递设定。长篇项目的上下文控制（前情提要、设定卡索引、卷级归档、任务单收窄）见 [references/pipeline.md](references/pipeline.md) 的"上下文管理纪律"，所有角色必须遵守。
 

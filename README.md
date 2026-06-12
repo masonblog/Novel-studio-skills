@@ -43,7 +43,11 @@
 
 主线程将以总编身份立项，并通过子代理派发各角色任务。
 
-### Codex / Hermes 等单 Agent 工具
+### Hermes Agent（委派模式）
+
+Hermes 支持 `delegate_task` 子代理委派。让 Agent 先阅读 `AGENTS.md`，它将以总编身份运行主对话，把架构师/设定师/写手/编辑/设计师任务委派给隔离子代理执行（任务单模板与配置建议见 [`hermes-delegation.md`](skills/novel-studio/references/hermes-delegation.md)）。建议在 `~/.hermes/config.yaml` 将 `delegation.max_iterations` 调高到 100 以容纳单批 5 章的写作量。
+
+### Codex 等单 Agent 工具
 
 在会话中让 Agent 先阅读 `AGENTS.md` 与 `skills/novel-studio/SKILL.md`，随后按流水线顺序"换帽"扮演各角色（换帽前读取对应角色 SKILL.md）。产物、目录与质量门禁与多代理模式完全一致。
 
